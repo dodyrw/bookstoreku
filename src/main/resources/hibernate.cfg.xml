@@ -4,8 +4,9 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 
+
   <session-factory>
-      <property name="hbm2ddl.auto">create-drop</property>
+      <property name="hbm2ddl.auto">update</property>
 
     <property name="connection.url">
       jdbc:postgresql://localhost:5432/bookstore
@@ -21,9 +22,12 @@
     <property name="cache.provider_class">
       org.hibernate.cache.NoCacheProvider
     </property>
+    
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
 
 
-  <mapping class="com.dwidasa.mybookstore.entities.Book"/>
+	<mapping class="com.dodyrw.bookstoreku.entities.Book"/>
 
   </session-factory>
 
