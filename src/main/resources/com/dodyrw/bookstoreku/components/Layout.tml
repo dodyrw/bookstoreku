@@ -11,11 +11,13 @@
     <!-- menu -->
     <ul>
     	<li><t:pagelink page="index">Home</t:pagelink></li>
+    	<li><t:pagelink page="book/list">Book</t:pagelink></li>
     	<li><t:pagelink page="about">About</t:pagelink></li>
     	<li><t:pagelink page="contact">Contact</t:pagelink></li>
     </ul>
     
     <!-- content  -->
+    <h1>${title}</h1>
     <t:body/>
     </body>
 </html>

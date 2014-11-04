@@ -1,0 +1,8 @@
+<html t:type="layout" title="All Books"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <t:pagelink page="book/create">Create new book</t:pagelink>
+
+</html>
+
