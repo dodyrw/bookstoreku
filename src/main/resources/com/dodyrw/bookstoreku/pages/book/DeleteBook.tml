@@ -4,6 +4,6 @@
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
-    delete
+    Book has been deleted.
     
 </html>
