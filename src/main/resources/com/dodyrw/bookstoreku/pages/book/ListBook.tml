@@ -5,6 +5,25 @@
     <p><t:pagelink page="book/create">Create new book</t:pagelink></p>
     
     <t:grid source="books" reorder="title,author,publisher"/>
-
+    
+    
+	<t:grid source="books2" 
+			row="currentBook" 
+			add="action"
+			reorder="title,author,publisher">
+		<p:titlecell>
+			<t:pagelink page="book/edit" context="currentBook" >
+				${currentBook.title}
+			</t:pagelink>
+		</p:titlecell>
+		<p:authorcell>
+			<a href="#">${currentBook.author}</a>
+		</p:authorcell>
+		<p:actionCell>
+        		<t:pagelink page="book/delete" context="currentBook" >
+				delete
+			</t:pagelink>
+        </p:actionCell>
+	</t:grid>
 </html>
 
