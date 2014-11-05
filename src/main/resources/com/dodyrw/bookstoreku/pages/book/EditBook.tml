@@ -1,0 +1,12 @@
+<html t:type="layout" title="Home"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <t:beaneditform object="book" 
+    					clientValidation="true"
+    					reorder="title,author,publisher"
+    					submitlabel="Edit Book"/>
+
+</html>
