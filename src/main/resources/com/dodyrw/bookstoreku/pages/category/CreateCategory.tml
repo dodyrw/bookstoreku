@@ -1,0 +1,9 @@
+<html t:type="layout" title="Create a Category"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <t:beaneditform object="category"
+    					submitlabel="Create a New Category"/>
+
+</html>
+

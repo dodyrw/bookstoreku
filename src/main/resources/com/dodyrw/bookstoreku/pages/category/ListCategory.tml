@@ -1,0 +1,22 @@
+<html t:type="layout" title="All Categories"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p><t:pagelink page="category/create">Create new category</t:pagelink></p>
+    
+	<t:grid source="categories" 
+			row="currentCategory" 
+			add="action">
+		<p:namecell>
+			<t:pagelink page="category/edit" context="currentCategory" >
+				${currentCategory.name}
+			</t:pagelink>
+		</p:namecell>
+		<p:actionCell>
+        		<t:pagelink page="category/delete" context="currentCategory" >
+				delete
+			</t:pagelink>
+        </p:actionCell>
+	</t:grid>
+</html>
+
