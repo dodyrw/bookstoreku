@@ -27,11 +27,5 @@ public class Category implements Serializable {
 	
 	@OneToMany(mappedBy="category")
 	public List<Book> books;
-	
-//	@OneToMany(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "developer_id")
-//	private List<Book> moreHobbies = new ArrayList<Hobby>();	
-	
-//	@OneToMany
-//    private Collection bookCollection;
+
 }
