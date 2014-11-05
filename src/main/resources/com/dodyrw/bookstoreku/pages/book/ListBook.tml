@@ -4,12 +4,12 @@
 
     <p><t:pagelink page="book/create">Create new book</t:pagelink></p>
     
-    <t:grid source="books" reorder="title,author,publisher"/>
+    <t:grid source="books" />
     
     
 	<t:grid source="books2" 
 			row="currentBook" 
-			add="action"
+			add="category,action"
 			reorder="title,author,publisher">
 		<p:titlecell>
 			<t:pagelink page="book/edit" context="currentBook" >
@@ -19,6 +19,9 @@
 		<p:authorcell>
 			<a href="#">${currentBook.author}</a>
 		</p:authorcell>
+		<p:categorycell>
+			${currentBook.category.name}
+		</p:categorycell>
 		<p:actionCell>
         		<t:pagelink page="book/delete" context="currentBook" >
 				delete

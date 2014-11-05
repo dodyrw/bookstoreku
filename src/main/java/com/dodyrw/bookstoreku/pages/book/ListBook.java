@@ -32,7 +32,7 @@ public class ListBook {
 //		List<Book> books = session.createCriteria(Book.class).list();		
 //		for (Iterator<Book> i = books.iterator(); i.hasNext();) {
 //		    Book book = (Book) i.next();
-//		    System.out.println("Book: "+book.title);
+//		    System.out.println("Book: "+book.category.name);
 //		}
 		
 	    return session.createCriteria(Book.class).list();
