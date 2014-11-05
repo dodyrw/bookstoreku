@@ -2,9 +2,37 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
 
-    <t:beaneditform object="book"
-    					reorder="title,author,publisher"
-    					submitlabel="Create a New Book"/>
+	<t:form t:id="books">
+            <t:errors/>
+            <table>
+                <tr>
+                    <td>Title:</td>
+                    <td><t:textfield t:id="title"/></td>
+                </tr>
+                <tr>
+                    <td>Author:</td>
+                    <td><t:textfield t:id="author"/></td>
+                </tr>
+                <tr>
+                    <td>Publisher:</td>
+                    <td><t:textfield t:id="publisher"/></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td>
+                    		<select>
+                    		<option t:type="loop" t:source="categories" t:value="category">
+                    			${category.name}
+                    		</option>
+                    		</select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Create a New Book"/></td>
+                </tr>
+            </table>
+        </t:form>
 
 </html>
 
