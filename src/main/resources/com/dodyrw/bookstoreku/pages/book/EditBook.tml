@@ -4,9 +4,33 @@
       xmlns:p="tapestry:parameter">
         <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
 
-    <t:beaneditform object="book" 
-    					clientValidation="true"
-    					reorder="title,author,publisher"
-    					submitlabel="Edit Book"/>
+		<t:form t:id="book">
+		<t:hidden t:id="bookId" value="${theBook.id}" />
+            <t:errors/>
+            <table>
+                <tr>
+                    <td>Title:</td>
+                    <td><t:textfield t:id="title" value="${thebook.title}" t:validate="required"/></td>
+                </tr>
+                <tr>
+                    <td>Author:</td>
+                    <td><t:textfield t:id="author" value="${thebook.author}" t:validate="required"/></td>
+                </tr>
+                <tr>
+                    <td>Publisher:</td>
+                    <td><t:textfield t:id="publisher" value="${thebook.publisher}"/></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td>
+                    		<t:select t:id="category" value="${thebook.category}" model="categorySelectModel"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Update Book"/></td>
+                </tr>
+            </table>
+        </t:form>
 
 </html>
