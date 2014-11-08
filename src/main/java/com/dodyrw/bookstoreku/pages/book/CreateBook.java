@@ -47,7 +47,7 @@ public class CreateBook {
 
     // Generally useful bits and pieces
 
-    @Component(id = "books")
+    @Component(id = "book")
     private Form form;
 
     @Component(id = "title")
@@ -61,7 +61,7 @@ public class CreateBook {
 
     // The code
 
-    void onValidateFromBooks() {
+    void onValidateFromBook() {
         if (title == null || title.trim().equals("")) {
             form.recordError(titleField, "Title is required.");
         }

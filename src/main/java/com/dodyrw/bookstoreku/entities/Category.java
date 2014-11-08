@@ -27,5 +27,26 @@ public class Category implements Serializable {
 	
 	@OneToMany(mappedBy="category")
 	public List<Book> books;
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public String toString() {
+	    //return String.valueOf(this.getId());
+		return name;
+	}
 
 }
